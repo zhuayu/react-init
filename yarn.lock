@@ -2416,6 +2416,11 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
+antd-dayjs-webpack-plugin@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/antd-dayjs-webpack-plugin/-/antd-dayjs-webpack-plugin-1.0.6.tgz#7d98bcb51422248b8cd4a32e352a0425a3bffa3a"
+  integrity sha512-UlK3BfA0iE2c5+Zz/Bd2iPAkT6cICtrKG4/swSik5MZweBHtgmu1aUQCHvICdiv39EAShdZy/edfP6mlkS/xXg==
+
 antd@^4.16.13:
   version "4.16.13"
   resolved "https://registry.npmjs.org/antd/-/antd-4.16.13.tgz#e9b9b4a590db28747aae1cab98981649a35880af"
@@ -4094,7 +4099,7 @@ date-fns@2.x:
   resolved "https://registry.npmjs.org/date-fns/-/date-fns-2.25.0.tgz#8c5c8f1d958be3809a9a03f4b742eba894fc5680"
   integrity sha512-ovYRFnTrbGPD4nqaEqescPEv1mNwvt+UTqI3Ay9SzNtey9NZnYu6E2qCcBBgJ6/2VF1zGGygpyTDITqpQQ5e+w==
 
-dayjs@1.x:
+dayjs@1.x, dayjs@^1.10.7:
   version "1.10.7"
   resolved "https://registry.npmjs.org/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
   integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==

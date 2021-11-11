@@ -5,12 +5,20 @@ import { Provider } from 'react-redux';
 import store from "@/store";
 import App from '@/App';
 // import reportWebVitals from './reportWebVitals';
+import { ConfigProvider } from 'antd';
+import locale from 'antd/lib/locale/zh_CN';
 import 'antd/dist/antd.less';
+import 'dayjs/locale/zh-cn';
+import dayjs from 'dayjs';
+dayjs.locale('zh-cn');
+
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <ConfigProvider locale={locale}>
+        <App />
+      </ConfigProvider>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

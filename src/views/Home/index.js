@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import IconLike from "@/icons/like";
 import { Button } from 'antd';
+import { DatePicker } from 'antd';
 function Home() {
   return (
     <>
@@ -10,6 +11,7 @@ function Home() {
       </main>
       <Button type="primary">Button</Button>
       <IconLike/>
+      <DatePicker  />
       <nav>
         <Link to="/protocol">Protocol</Link>
       </nav>
