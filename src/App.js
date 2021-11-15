@@ -1,11 +1,11 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useRoutes, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux"
-import { setUserInfo } from "@/store/user.slice";
-import routes from "@/router/routes.js";
+import { setUserInfo } from "./store/user.slice";
+import routes from "./router/routes.js";
 import NProgress from "nprogress";
 import cookies from "js-cookie";
-import userService from "@/global/service/user";
+import userService from "./global/service/user";
 import "nprogress/nprogress.css";
 
 function App() {

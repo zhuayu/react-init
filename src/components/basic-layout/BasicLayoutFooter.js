@@ -7,10 +7,10 @@ function BasicLayoutFooter() {
       <div className="container container-1200">
         <div className="content-left">
           <span>Copyright © 2020 home-plan.cn All Rights Reserved</span>
-          <a className="beian-text" target="_blank" rel="noreferrer" href="https://beian.miit.gov.cn/"
+          <a data-testid="icp" className="beian-text" target="_blank" rel="noreferrer" href="https://beian.miit.gov.cn/"
             >沪ICP备2020026846号</a
           >
-          <span>沪公网安备 31010102006648号</span>
+          <span data-testid="gongan">沪公网安备31010102006648号</span>
         </div>
         <div className="content-right">
           <span>联系邮箱：kf@home-plan.cn</span>
