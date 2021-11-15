@@ -1,0 +1,259 @@
+@import "@/style/variable.less";
+
+.page-header {
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  z-index: 9;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: calc(100vw - 88px);
+    min-width: 1200px;
+    margin: 0 auto;
+    .header-hd,
+    .header-bd,
+    .header-ft {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  .logo-container {
+    width: 164px;
+    margin-right: 58px;
+    cursor: pointer;
+    .logo-content {
+      width: 164px;
+      height: 46px;
+      vertical-align: middle;
+    }
+  }
+
+  .nav-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+      width: 160px;
+      height: 60px;
+      margin-left: 65px;
+
+      &.academy{
+        background-image: url("~/assets/images/layout/header/academy_normal.svg");
+      }
+      &.bible{
+        background-image: url("~/assets/images/layout/header/bible_normal.svg");
+      }
+      &.question{
+        background-image: url("~/assets/images/layout/header/question_normal.svg");
+      }
+      &.task{
+        background-image: url("~/assets/images/layout/header/task_normal.svg");
+      }
+
+      &.active,
+      &:hover{
+        &.academy{
+          background-image: url("~/assets/images/layout/header/academy_hover.svg");
+        }
+        &.bible{
+          background-image: url("~/assets/images/layout/header/bible_hover.svg");
+        }
+        &.question{
+          background-image: url("~/assets/images/layout/header/question_hover.svg");
+        }
+        &.task{
+          background-image: url("~/assets/images/layout/header/task_hover.svg");
+        }
+      }
+
+      &:active{
+        &.academy{
+          background-image: url("~/assets/images/layout/header/academy_pressing.svg");
+        }
+        &.bible{
+          background-image: url("~/assets/images/layout/header/bible_pressing.svg");
+        }
+        &.question{
+          background-image: url("~/assets/images/layout/header/question_pressing.svg");
+        }
+        &.task{
+          background-image: url("~/assets/images/layout/header/task_pressing.svg");
+        }
+      }
+    }
+  }
+
+  .plan-go-container {
+    width: 160px;
+    height: 60px;
+    margin-right: 20px;
+    background-image: url("~/assets/images/layout/header/plango.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &:active {
+      height: 60px;
+      background-image: url("~/assets/images/layout/header/plango_active.svg");
+    }
+  }
+
+  .notification-container{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+    background-image: url("~/assets/images/layout/header/notification-icon.svg");
+    background-position: center;
+    &.active {
+      &:before{
+        position: absolute;
+        top: 21px;
+        left: 11px;
+        width: 3px;
+        height: 3px;
+        background-color: #15ae65;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px white;
+        content: '';
+      }
+    }
+  }
+
+  .login-container {
+    width: 96px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: unset;
+    background-color: @primaryColor;
+    cursor: pointer;
+    transition: all .2s ease;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+
+  .user-container{
+    width: 48px;
+    height: 48px;
+    border: 2px solid @primaryColor;
+    border-radius: 50%;
+    cursor: pointer;
+    .user-avatar{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .user-overlay-container{
+    width: 170px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.06);
+
+    .user-content{
+      padding: 24px 20px;
+      line-height: 14px;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      color: #333333;
+      border-bottom: 1px solid #e6e6e6;
+      .user-name {
+        display: inline-block;
+        max-width: calc(100% - 28px);
+        vertical-align: middle;
+        &:after{
+          display: inline-block;
+          content: "";
+          margin-left: 10px;
+          width: 18px;
+          height: 18px;
+          vertical-align: middle;
+          background-size: 18px;
+          background-image: url("~/assets/images/layout/header/vip-icon_fumu.png");
+        }
+        &.vip{
+          &:after{
+            background-image: url("~/assets/images/layout/header/vip-icon_zungui.png");
+          }
+        }
+      }
+    }
+
+    .menu-content{
+      .menu-item{
+        display: flex;
+        align-items: center;
+        padding: 9px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #333333;
+        cursor: pointer;
+
+        &.logout{
+          border-top: 1px solid #e6e6e6;
+        }
+
+        &:before{
+          content: "";
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          vertical-align: -7px;
+          margin-right: 12px;
+          mask-repeat: no-repeat;
+          mask-position: center;
+          mask-size: 24px;
+          background-color: #333;
+        }
+
+        &.workbench:before {
+          mask-image: url("~/assets/images/layout/header/workbench-icon.svg");
+        }
+        &.setting:before {
+          mask-image: url("~/assets/images/layout/header/setting-icon.svg");
+        }
+        &.work:before {
+          mask-image: url("~/assets/images/layout/header/work-icon.svg");
+        }
+        &.logout:before {
+          mask-image: url("~/assets/images/layout/header/logout-icon.svg");
+        }
+
+        &:hover {
+          color: #fff;
+          background-color: @primaryColor;
+          &:before{
+            background-color: #fff;
+          }
+          &.logout {
+            color: @primaryColor;
+            background-color: #fff;
+            &:before{
+              background-color: @primaryColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

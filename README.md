@@ -8,3 +8,12 @@
 - [nprogress](https://github.com/rstacruz/nprogress) 页面加载进度插件
 - [js-cookie](https://github.com/js-cookie/js-cookie) 获取浏览器中的 cookie 插件
 - [redux-devtools-extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd/related) redux 调试工具
+
+
+## DEV ATTENTION
+#TBD
+
+## FUTURE
+- supper typescript remove prop-types
+
+

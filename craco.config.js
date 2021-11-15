@@ -7,6 +7,7 @@ module.exports = {
   webpack: {
     alias: {
       '@': path.join(path.resolve(__dirname, './src')),
+      '~': path.join(path.resolve(__dirname, './src')),
     },
     plugins: {
       add: [

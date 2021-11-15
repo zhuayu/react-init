@@ -1,0 +1,62 @@
+@import "@/style/variable.less";
+
+.page-footer {
+  height: 60px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  background-color: @primaryColor;
+
+  .container {
+    width: calc(100vw - 88px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content-right {
+    display: flex;
+    align-items: center;
+    .qrcode-container {
+      height: 42px;
+      width: 42px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      margin-left: 36px;
+      padding: 5px;
+      position: relative;
+      font-size: 0;
+      .wechat-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 30px;
+        width: 30px;
+      }
+      .wechat-qrcode {
+        display: none;
+        position: absolute;
+        width: 138px;
+        height: 138px;
+        top: -157px;
+        left: -70px;
+      }
+      &:hover {
+        .wechat-qrcode {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .content-left {
+    display: flex;
+    .beian-text {
+      margin: 0 10px;
+      color: #fff;
+    }
+  }
+}

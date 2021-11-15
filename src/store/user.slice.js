@@ -1,26 +1,45 @@
 import {
   createSlice,
+  createSelector
 } from "@reduxjs/toolkit"
 
 export const USER_FEATURE_KEY = "USER";
 const { reducer: userReducer, actions } = createSlice({
   name: USER_FEATURE_KEY,
-  initialState: {
-    userInfo: {},
-    userIsLogin: false,
-  },
+  initialState: {},
   reducers: {
     setUserInfo: (state, action) => {
-      state.userIsLogin = !!action.payload.id;
-      state.userInfo = Object.assign(state.userInfo, action.payload);
+      state = Object.assign(state, action.payload);
     },
     updateUserInfo: (state, action) => {
-      state.userInfo = Object.assign(state.userInfo, action.payload);
+      state = Object.assign(state, action.payload);
     }
   }
 });
 
-export const { setUserInfo } = actions
+
+export const user = createSelector(
+  state => state[USER_FEATURE_KEY],
+  userInfo => userInfo
+);
+export const isVip = createSelector(
+  state => state[USER_FEATURE_KEY].vip_expired,
+  vipExpired => {
+    return vipExpired 
+      ? (new Date(vipExpired).valueOf() > new Date().valueOf())
+      : false;
+  }
+);
+export const isLogin = createSelector(
+  state => state[USER_FEATURE_KEY],
+  userInfo => userInfo.id ? true : false
+);
+export const isDesigner = createSelector(
+  state => state[USER_FEATURE_KEY],
+  userInfo => userInfo.jobs ? userInfo.jobs.length > 0 : false
+);
+
+export const { setUserInfo } = actions;
 export default userReducer;
 
 

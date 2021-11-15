@@ -1,0 +1,51 @@
+<svg width="160" height="60" viewBox="0 0 160 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="45" y="22" width="99" height="19" fill="#D7FBCF"/>
+<path d="M74.118 31.772L71.752 32.08V24.492H70.268V32.262L61.742 33.354L61.938 34.768L70.268 33.704V37.456H71.752V33.508L74.328 33.186L74.118 31.772ZM65.396 25.01L64.36 26.018C65.9 27.11 67.09 28.118 67.93 29.042L69.022 27.95C68.042 26.97 66.824 25.99 65.396 25.01ZM63.912 27.992L62.876 29C64.402 30.064 65.578 31.058 66.418 31.968L67.552 30.834C66.558 29.896 65.34 28.944 63.912 27.992ZM75.686 24.968V26.396H79.732V28.076H76.442V37.386H77.912V36.868H86.116V37.386H87.586V28.076H84.212V26.396H88.314V24.968H75.686ZM77.912 35.496V33.62L78.892 34.474C80.376 33.438 81.146 31.786 81.174 29.518V29.448H82.77V31.982C82.77 33.046 83.274 33.592 84.31 33.592H86.116V35.496H77.912ZM81.174 26.396H82.77V28.076H81.174V26.396ZM77.912 33.354V29.448H79.732V29.518C79.704 31.254 79.102 32.528 77.912 33.354ZM84.212 29.448H86.116V32.262H84.758C84.394 32.262 84.212 32.038 84.212 31.618V29.448ZM98.114 32.15C98.772 34.012 99.836 35.566 101.32 36.812L102.356 35.594C100.942 34.614 99.92 33.326 99.276 31.744C100.088 31.422 100.858 31.03 101.572 30.582L100.592 29.602C99.5 30.302 98.352 30.82 97.134 31.17C96.882 30.694 96.56 30.246 96.168 29.826C96.476 29.644 96.77 29.448 97.078 29.238H100.144V27.894H91.856V29.238H94.768C94.516 29.35 94.25 29.462 93.984 29.574C92.85 30.036 91.646 30.4 90.372 30.652L91.114 31.87C92.794 31.366 94.096 30.89 94.992 30.456C94.992 30.442 95.02 30.428 95.048 30.428C95.16 30.568 95.286 30.708 95.398 30.876C94.138 31.744 92.374 32.472 90.106 33.046L90.834 34.292C92.976 33.676 94.698 32.878 96 31.926C96.098 32.15 96.182 32.388 96.266 32.654C94.768 33.83 92.654 34.796 89.924 35.566L90.652 36.812C93.046 36.084 94.992 35.16 96.504 34.04C96.504 34.124 96.518 34.222 96.518 34.334C96.518 35.076 96.392 35.58 96.168 35.846C95.972 36.042 95.496 36.154 94.74 36.154H94.012L94.502 37.442H94.936C96.224 37.442 97.064 37.176 97.442 36.672C97.75 36.252 97.918 35.482 97.918 34.334C97.904 33.606 97.806 32.934 97.61 32.29C97.778 32.248 97.946 32.206 98.114 32.15ZM96.378 24.408L94.88 24.66C95.034 24.94 95.174 25.248 95.314 25.584H89.966V28.244H91.408V26.928H100.578V28.244H102.034V25.584H96.798C96.658 25.15 96.518 24.758 96.378 24.408ZM109.244 29.994V31.954H105.716V33.326H109.244V35.832H104.106V37.19H115.88V35.832H113.878L114.592 35.342C114.242 34.81 113.752 34.18 113.136 33.466L112.03 34.152C112.52 34.754 112.926 35.314 113.262 35.832H110.728V33.326H114.172V31.954H110.728V29.994H114.634V28.79H115.852V25.78H110.84C110.7 25.318 110.56 24.898 110.406 24.52L108.838 24.772C108.992 25.08 109.132 25.416 109.258 25.78H104.12V28.818H105.394V29.994H109.244ZM105.604 28.622V27.194H114.382V28.622H105.604ZM129.222 26.172H126.24V24.464H124.854V26.172H123.174V24.464H121.788V26.172H118.792V32.696H117.546V34.096H130.412V32.696H129.222V26.172ZM120.192 32.696V30.694H121.788V32.696H120.192ZM123.174 32.696V30.694H124.854V32.696H123.174ZM126.24 32.696V30.694H127.822V32.696H126.24ZM120.192 29.364V27.516H121.788V29.364H120.192ZM123.174 27.516H124.854V29.364H123.174V27.516ZM126.24 27.516H127.822V29.364H126.24V27.516ZM126.002 34.166L125.26 35.272C126.702 35.832 128.116 36.602 129.488 37.582L130.272 36.35C128.984 35.496 127.57 34.768 126.002 34.166ZM121.914 34.166C120.836 35.02 119.45 35.72 117.77 36.252L118.4 37.61C120.136 36.966 121.606 36.168 122.824 35.216L121.914 34.166Z" fill="#14AF64"/>
+<rect x="43" y="24" width="2" height="15" fill="black"/>
+<rect x="146" y="39" width="2" height="15" transform="rotate(-180 146 39)" fill="black"/>
+<rect x="142" y="20" width="2" height="95" transform="rotate(90 142 20)" fill="black"/>
+<rect x="142" y="41" width="2" height="95" transform="rotate(90 142 41)" fill="black"/>
+<rect x="45" y="22" width="2" height="2" fill="black"/>
+<rect x="144" y="41" width="2" height="2" transform="rotate(-180 144 41)" fill="black"/>
+<rect x="45" y="39" width="2" height="2" fill="black"/>
+<rect x="144" y="24" width="2" height="2" transform="rotate(-180 144 24)" fill="black"/>
+<rect x="18" y="24" width="35" height="17" fill="#14AF64"/>
+<rect x="22" y="23" width="27" height="15" fill="#D7FBCF"/>
+<rect x="22" y="20" width="9" height="3" fill="#D7FBCF"/>
+<rect x="40" y="20" width="9" height="3" fill="#D7FBCF"/>
+<rect x="15" y="23" width="3" height="18" fill="black"/>
+<rect width="3" height="18" transform="matrix(-1 0 0 1 56 23)" fill="black"/>
+<rect x="19" y="18" width="3" height="20" fill="black"/>
+<rect width="3" height="20" transform="matrix(-1 0 0 1 52 18)" fill="black"/>
+<rect x="27" y="17" width="3" height="6" transform="rotate(90 27 17)" fill="black"/>
+<rect width="3" height="6" transform="matrix(4.48162e-08 1 1 -4.26338e-08 44 17)" fill="black"/>
+<rect x="27" y="23" width="3" height="3" transform="rotate(90 27 23)" fill="black"/>
+<rect width="3" height="3" transform="matrix(4.48162e-08 1 1 -4.26338e-08 44 26)" fill="black"/>
+<rect x="27" y="29" width="3" height="3" transform="rotate(90 27 29)" fill="black"/>
+<rect x="31" y="18" width="3" height="6" transform="rotate(90 31 18)" fill="black"/>
+<rect width="3" height="6" transform="matrix(4.48162e-08 1 1 -4.26338e-08 40 18)" fill="black"/>
+<rect x="31" y="25" width="3" height="5" transform="rotate(90 31 25)" fill="black"/>
+<rect width="3" height="5" transform="matrix(4.48162e-08 1 1 -4.26338e-08 40 28)" fill="black"/>
+<rect x="31" y="31" width="3" height="5" transform="rotate(90 31 31)" fill="black"/>
+<rect x="27" y="40" width="3" height="11" transform="rotate(90 27 40)" fill="black"/>
+<rect width="3" height="11" transform="matrix(4.48162e-08 1 1 -4.26338e-08 44 40)" fill="black"/>
+<rect x="31" y="36" width="3" height="4" transform="rotate(90 31 36)" fill="black"/>
+<rect width="3" height="4" transform="matrix(4.48162e-08 1 1 -4.26338e-08 40 36)" fill="black"/>
+<rect x="39" y="42" width="4" height="7" transform="rotate(90 39 42)" fill="black"/>
+<rect x="34" y="41" width="3" height="5" transform="rotate(90 34 41)" fill="black"/>
+<rect width="3" height="5" transform="matrix(4.48162e-08 1 1 -4.26338e-08 37 41)" fill="black"/>
+<rect x="34" y="20" width="3" height="3" transform="rotate(90 34 20)" fill="black"/>
+<rect width="3" height="3" transform="matrix(4.48162e-08 1 1 -4.26338e-08 37 20)" fill="black"/>
+<rect x="33" y="27" width="2" height="3" transform="rotate(90 33 27)" fill="black"/>
+<rect width="2" height="3" transform="matrix(4.48162e-08 1 1 -4.26338e-08 38 30)" fill="black"/>
+<rect x="33" y="33" width="2" height="3" transform="rotate(90 33 33)" fill="black"/>
+<rect x="29" y="41" width="2" height="2" transform="rotate(90 29 41)" fill="black"/>
+<rect width="2" height="2" transform="matrix(4.48162e-08 1 1 -4.26338e-08 42 41)" fill="black"/>
+<rect x="27" y="35" width="3" height="6" transform="rotate(90 27 35)" fill="black"/>
+<rect width="3" height="6" transform="matrix(4.48162e-08 1 1 -4.26338e-08 44 35)" fill="black"/>
+<rect x="34" y="21" width="3" height="21" fill="black"/>
+<rect x="31" y="38" width="3" height="3" fill="black"/>
+<rect width="3" height="3" transform="matrix(-1 0 0 1 40 38)" fill="black"/>
+<rect x="19" y="21" width="3" height="3" transform="rotate(90 19 21)" fill="black"/>
+<rect width="3" height="3" transform="matrix(4.48162e-08 1 1 -4.26338e-08 52 21)" fill="black"/>
+</svg>

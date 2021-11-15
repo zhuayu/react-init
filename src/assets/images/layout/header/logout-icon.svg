@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>退出</title>
+    <g id="页面-1" stroke="#123"  stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="登录小卡片" transform="translate(-1731.000000, -347.000000)">
+            <g id="编组-20" transform="translate(1711.000000, 188.000000)">
+                <g id="编组-19" transform="translate(20.000000, 159.000000)">
+                    <rect id="矩形备份" opacity="0" x="4" y="3" width="16" height="16"></rect>
+                    <g id="编组-15" transform="translate(3.000000, 3.000000)" stroke="#000000" stroke-linejoin="round">
+                        <path d="M11.5210205,3.20049593 C13.6247186,4.3865622 15.04,6.60283865 15.04,9.14116535 C15.04,12.9291951 11.8880846,16 8,16 C4.11191536,16 0.96,12.9291951 0.96,9.14116535 C0.96,6.60248483 2.37567603,4.38594434 4.47985922,3.2" id="路径"></path>
+                        <line x1="8" y1="0.414814815" x2="8" y2="7.05185185" id="直线"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
