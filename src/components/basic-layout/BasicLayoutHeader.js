@@ -1,11 +1,15 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { user, isVip, isLogin, isDesigner } from "@store/user.slice";
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from 'react';
+import { user, isVip, isLogin, isDesigner, delUserInfo } from "@store/user.slice";
 import BasicLayoutHeaderNav from "./BasicLayoutHeaderNav";
 import BasicLayoutHeaderAvatar from "./BasicLayoutHeaderAvatar";
+import BasicModalLoginAndRegister from "@components/basic-modal/BasicModalLoginAndRegister";
 import HOMEPLAN_LOGO from "@assets/images/layout/header/homeplan-logo.svg";
+import cookies from "js-cookie";
 
 const NAV_PATHNAME_MAP = {
+  'home'         : '/',
   'academy'      : '/academy', 
   'bible'        : '/bible', 
   'question'     : '/question',
@@ -18,12 +22,14 @@ const NAV_PATHNAME_MAP = {
 };
 
 function BasicLayoutHeader() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const userInfo = useSelector(user);
   const userIsVip = useSelector(isVip);
   const userIsLogin = useSelector(isLogin);
   const userisDesigner = useSelector(isDesigner);
+  const [larVisible, setLarVisible] = useState(false);
 
   const NAV_TOPAGES = ['academy', 'bible', 'question', 
     userisDesigner ? 'task' : null
@@ -36,12 +42,11 @@ function BasicLayoutHeader() {
     NAV_PATHNAME_MAP[pathName] && navigate(NAV_PATHNAME_MAP[pathName]);
   }
 
-  const handleLogin = () => {
-    console.log('login ok');
-  }
-
   const handleLogout = () => {
-    console.log('logout ok');
+    cookies.remove("web_token", 
+      { path: "/", domain: process.env.REACT_APP_DOMAIN});
+    dispatch(delUserInfo());
+    navigate(NAV_PATHNAME_MAP['home']);
   }
 
   return (
@@ -73,10 +78,14 @@ function BasicLayoutHeader() {
               />
             </>
           ) : (
-            <div className="login-container" 
-              onClick={handleLogin}>
-              登录 / 注册
-            </div>
+            <>
+              <div className="login-container" 
+                onClick={() => setLarVisible(true)}>
+                登录 / 注册
+              </div>
+              <BasicModalLoginAndRegister visible={larVisible} 
+                onCancel={() => setLarVisible(false)}/>
+            </>
           )}
         </div>
       </div>

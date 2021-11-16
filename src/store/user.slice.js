@@ -11,9 +11,9 @@ const { reducer: userReducer, actions } = createSlice({
     setUserInfo: (state, action) => {
       state = Object.assign(state, action.payload);
     },
-    updateUserInfo: (state, action) => {
-      state = Object.assign(state, action.payload);
-    }
+    delUserInfo: (state, action) => {
+      return {}
+    },
   }
 });
 
@@ -39,7 +39,7 @@ export const isDesigner = createSelector(
   userInfo => userInfo.jobs ? userInfo.jobs.length > 0 : false
 );
 
-export const { setUserInfo } = actions;
+export const { setUserInfo, delUserInfo } = actions;
 export default userReducer;
 
 
