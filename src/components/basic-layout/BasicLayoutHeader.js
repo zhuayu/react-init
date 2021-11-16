@@ -1,9 +1,9 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { user, isVip, isLogin, isDesigner } from "@/store/user.slice";
+import { user, isVip, isLogin, isDesigner } from "@store/user.slice";
 import BasicLayoutHeaderNav from "./BasicLayoutHeaderNav";
 import BasicLayoutHeaderAvatar from "./BasicLayoutHeaderAvatar";
-import HOMEPLAN_LOGO from "@/assets/images/layout/header/homeplan-logo.svg";
+import HOMEPLAN_LOGO from "@assets/images/layout/header/homeplan-logo.svg";
 
 const NAV_PATHNAME_MAP = {
   'academy'      : '/academy', 

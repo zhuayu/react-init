@@ -1,18 +1,18 @@
 import * as React from "react";
-import BasicLayout from "@/components/basic-layout";
+import BasicLayout from "@components/basic-layout";
 
-const Home         = React.lazy(() => import("@/views/Home"));
-const Academy      = React.lazy(() => import("@/views/Academy"));
-const Bible        = React.lazy(() => import("@/views/Bible"));
-const Question     = React.lazy(() => import("@/views/Question"));
-const Task         = React.lazy(() => import("@/views/Task"));
-const Protocol     = React.lazy(() => import("@/views/Protocol"));
-const Notification = React.lazy(() => import("@/views/Notification"));
-const MyPlan       = React.lazy(() => import("@/views/My/Plan"));
-const MyQuestion   = React.lazy(() => import("@/views/My/Question"));
-const MyKlass      = React.lazy(() => import("@/views/My/Klass"));
-const MySetting    = React.lazy(() => import("@/views/My/Setting"));
-const Work         = React.lazy(() => import("@/views/Work"));
+const Home         = React.lazy(() => import("@views/Home"));
+const Academy      = React.lazy(() => import("@views/Academy"));
+const Bible        = React.lazy(() => import("@views/Bible"));
+const Question     = React.lazy(() => import("@views/Question"));
+const Task         = React.lazy(() => import("@views/Task"));
+const Protocol     = React.lazy(() => import("@views/Protocol"));
+const Notification = React.lazy(() => import("@views/Notification"));
+const MyPlan       = React.lazy(() => import("@views/My/Plan"));
+const MyQuestion   = React.lazy(() => import("@views/My/Question"));
+const MyKlass      = React.lazy(() => import("@views/My/Klass"));
+const MySetting    = React.lazy(() => import("@views/My/Setting"));
+const Work         = React.lazy(() => import("@views/Work"));
 
 const routes = [
   {

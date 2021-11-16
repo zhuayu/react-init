@@ -14,36 +14,29 @@ BasicLayoutHeaderAvatar.propTypes = {
 
 function BasicLayoutHeaderAvatar(props) {
 
-  const handleMenuItemClick = (slug) => {
-    typeof props.clickMenu === 'function' && props.clickMenu(slug);
-  }
-
-  const handleLogout = (slug) => {
-    typeof props.logout === 'function' && props.logout();
-  }
-
   const userOverlay = (
-    <div className="user-overlay-container">
+    <div className="user-overlay-container" data-testid="user-overlay-container">
       <div className="user-content">
         <span className={`user-name ${props.vip ? 'vip' : ''}`}>
-          {props.userInfo.nickname}</span>
+          {props.userInfo?.nickname}</span>
       </div>
       <div className="menu-content">
-        <div className="menu-item workbench" onClick={() => handleMenuItemClick('workbench')}>学习中心</div>
-        <div className="menu-item setting" onClick={() => handleMenuItemClick('setting')}>个人中心</div>
-        { props.designer ? <div className="menu-item work" onClick={() => handleMenuItemClick('work')}>赏金领地</div> : null}
-        <div className="menu-item logout" onClick={() => handleLogout()}>退出登录</div>
+        <div className="menu-item workbench" onClick={() => props.clickMenu('workbench')}>学习中心</div>
+        <div className="menu-item setting" onClick={() => props.clickMenu('setting')}>个人中心</div>
+        { props.designer ? <div className="menu-item work" onClick={() => props.clickMenu('work')}>赏金领地</div> : null}
+        <div className="menu-item logout" onClick={() => props.logout()}>退出登录</div>
       </div>
     </div>
   );
 
   return (
-    <div className="user-container" id="header-userinfo-container">
-      <Dropdown overlay={userOverlay} 
+    <div className="user-container" id="header-userinfo-container" data-testid="header-userinfo-container">
+      <Dropdown
+        overlay={userOverlay} 
         arrow 
         placement="bottomRight" 
         getPopupContainer={() => document.getElementById('header-userinfo-container')}>
-        <Avatar className="user-avatar" src={props.userInfo.avatar_url} />
+        <Avatar data-testid="user-avatar" className="user-avatar" src={props.userInfo?.avatar_url} />
       </Dropdown>
     </div>
   );

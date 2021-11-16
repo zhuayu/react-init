@@ -1,5 +1,5 @@
-import wechatIcon from "@/assets/images/layout/footer/wechat-logo.svg";
-import wechatOfficalQrcode from "@/assets/images/layout/footer/wechat-offical-qrcode.svg";
+import wechatIcon from "@assets/images/layout/footer/wechat-logo.svg";
+import wechatOfficalQrcode from "@assets/images/layout/footer/wechat-offical-qrcode.svg";
 
 function BasicLayoutFooter() {
   return (

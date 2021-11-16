@@ -7,7 +7,12 @@ module.exports = {
   webpack: {
     alias: {
       '@': path.join(path.resolve(__dirname, './src')),
-      '~': path.join(path.resolve(__dirname, './src')),
+      '@views': path.join(path.resolve(__dirname, './src/views')),
+      '@assets': path.join(path.resolve(__dirname, './src/assets')),
+      '@store': path.join(path.resolve(__dirname, './src/store')),
+      '@style': path.join(path.resolve(__dirname, './src/style')),
+      '@components': path.join(path.resolve(__dirname, './src/components')),
+      '~assets': path.join(path.resolve(__dirname, './src/assets'))
     },
     plugins: {
       add: [
@@ -16,6 +21,17 @@ module.exports = {
         })
       ]
     }
+  },
+  jest: {
+    configure: {
+      "transformIgnorePatterns": [
+        "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
+      ],
+      "moduleNameMapper": {
+        "^@components(.*)$": "<rootDir>/src/components$1",
+        "^@assets(.*)$": "<rootDir>/src/assets$1",
+      }
+    },
   },
   plugins: [
     {
