@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { user, isVip, isLogin, isDesigner, delUserInfo } from "@store/user.slice";
 import BasicLayoutHeaderNav from "./BasicLayoutHeaderNav";
 import BasicLayoutHeaderAvatar from "./BasicLayoutHeaderAvatar";
-import BasicModalLoginAndRegister from "@components/basic-modal/BasicModalLoginAndRegister";
+import WechatScanLoginModal from "@components/effect-modal/WechatScanLoginModal";
+import BindPhoneModal from "@components/effect-modal/BindPhoneModal";
 import HOMEPLAN_LOGO from "@assets/images/layout/header/homeplan-logo.svg";
 import cookies from "js-cookie";
 
@@ -29,7 +30,9 @@ function BasicLayoutHeader() {
   const userIsVip = useSelector(isVip);
   const userIsLogin = useSelector(isLogin);
   const userisDesigner = useSelector(isDesigner);
-  const [larVisible, setLarVisible] = useState(false);
+  const [wechatModalVisible, setWechatModalVisible] = useState(false);
+  const [bindPhoneModalVisible, setbindPhoneModalVisible] = useState(true);
+
 
   const NAV_TOPAGES = ['academy', 'bible', 'question', 
     userisDesigner ? 'task' : null
@@ -48,6 +51,20 @@ function BasicLayoutHeader() {
     dispatch(delUserInfo());
     navigate(NAV_PATHNAME_MAP['home']);
   }
+
+  const modelComponents = (
+    <>
+      { !userIsLogin && <WechatScanLoginModal 
+        visible={wechatModalVisible} 
+        onCancel={() => setWechatModalVisible(false)}/>
+      }
+
+      { (userInfo.phone) && <BindPhoneModal 
+        visible={bindPhoneModalVisible} 
+        onCancel={() => setbindPhoneModalVisible(false)}/>
+      }
+    </>
+  );
 
   return (
     <header className="page-header">
@@ -80,13 +97,12 @@ function BasicLayoutHeader() {
           ) : (
             <>
               <div className="login-container" 
-                onClick={() => setLarVisible(true)}>
+                onClick={() => setWechatModalVisible(true)}>
                 登录 / 注册
               </div>
-              <BasicModalLoginAndRegister visible={larVisible} 
-                onCancel={() => setLarVisible(false)}/>
             </>
           )}
+          {modelComponents}
         </div>
       </div>
     </header>

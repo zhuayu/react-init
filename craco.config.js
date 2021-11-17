@@ -28,6 +28,8 @@ module.exports = {
         "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
       ],
       "moduleNameMapper": {
+        "^@src(.*)$": "<rootDir>/src$1",
+        "^@store(.*)$": "<rootDir>/src/store$1",
         "^@components(.*)$": "<rootDir>/src/components$1",
         "^@assets(.*)$": "<rootDir>/src/assets$1",
       }

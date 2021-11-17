@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { Modal } from 'antd';
-import "./style/BasicModalLoginAndRegister.less";
+import "./style/WechatScanLoginModal.less";
 
-BasicModalLoginAndRegister.propTypes = {
+WechatScanLoginModal.propTypes = {
   visible: PropTypes.bool.isRequired,
   onCancel: PropTypes.func
 };
 
-function BasicModalLoginAndRegister(props) {
+function WechatScanLoginModal(props) {
 
   useEffect(() => {
     props.visible && new window.WxLogin({
@@ -31,7 +31,7 @@ function BasicModalLoginAndRegister(props) {
       centered={true}
       closable={false}
       footer={null}>
-      <div className="lar-container">
+      <div className="wechat-scan-modal">
         { props.onCancel && <i className="lar-cancel" onClick={() => props.onCancel(false)}></i>}
         <div className="lar-logo-container">
           <div className="lar-logo-element"></div>
@@ -43,4 +43,4 @@ function BasicModalLoginAndRegister(props) {
   );
 }
 
-export default BasicModalLoginAndRegister;
+export default WechatScanLoginModal;

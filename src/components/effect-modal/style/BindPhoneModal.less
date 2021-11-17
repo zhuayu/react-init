@@ -1,0 +1,224 @@
+@import "@/style/variable.less";
+
+.bind-phone-modal{
+  padding: 0 21px;
+  .lar-cancel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url("~assets/images/modal/close-icon.svg");
+    background-size: 30px 30px;
+    transition: all .2s ease;
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+
+  .lar-logo-element {
+    width: 100px;
+    height: 83px;
+    margin: 29px auto;
+    background-image: url("~assets/images/modal/homeplan-logo.svg");
+    background-size: 100px 83px;
+  }
+
+  .modal-title {
+    margin-bottom: 22px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+  }
+
+  .ant-form-item{
+    .ant-input {
+      background: #f4f4f4!important;
+      border-color: #000!important;
+      border-radius: 2px !important;
+      box-shadow: none!important;
+    }
+  }
+
+  .form-code-container{
+    display: flex;
+
+    .form-code-input{
+      flex: 1;
+    }
+    .form-code-box{
+      display: inline-block;
+      width: 110px;
+      height: 42px;
+      line-height: 42px;
+      margin-left: 10px;
+      font-size: 12px;
+      font-weight: 400;
+      text-align: center;
+      color: #ffffff;
+      border-radius: 2px;
+      border: 1px solid #000;
+      background: @primaryColor;
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.disable{
+        background-color: #999999;
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .form-submit-btn-container{
+    margin: 102px 0 40px;
+    text-align: center;
+  }
+
+  .form-submit-btn{
+    display: inline-block;
+    width: 206px;
+    height: 46px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    background: url("~assets/images/modal/bind-phone-modal-btn__disable.svg") no-repeat center;
+    border: none;
+    outline: none;
+    padding: 0 4px 4px 0;
+    &:hover {
+      filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.3));
+      cursor: not-allowed;
+    }
+    &.active {
+      background: url("~assets/images/modal/bind-phone-modal-btn__active.svg") no-repeat center;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.login_container {
+  text-align: center;
+  .header {
+    text-align: right;
+    .header-cancel {
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .logo {
+    width: 100px;
+    height: 83px;
+    margin: 29px auto 39px;
+  }
+
+
+  .content {
+    padding: 0 45px;
+    .title {
+      text-align: left;
+      font-size: 16px;
+      font-weight: 400;
+      color: #000000;
+      margin-bottom: 21px;
+    }
+    /deep/.el-input {
+      border: 1px solid #000 !important;
+      border-radius: 2px !important;
+    }
+    .code-get {
+      display: inline-block;
+      width: 110px;
+      height: 42px;
+      background-color: #999999;
+      border-radius: 2px;
+      outline: none;
+      margin-left: 10px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #ffffff;
+      border: 1px solid #000 !important;
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+    .Sent {
+      background: @primaryColor;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .consent-button_section {
+      display: flex;
+      align-items: center;
+      .consent-button {
+        width: 16px;
+        height: 16px;
+        background: #ffffff;
+        border: 1px solid #c6c6c6;
+        border-radius: 50%;
+        margin-right: 8px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .consent_active {
+        // background: url("./../../assets/images/buttom_5-1-bg.svg") no-repeat center;
+        background-size: cover;
+        padding: none;
+        border: #000;
+      }
+      .consent-title {
+        display: flex;
+        font-size: 12px;
+        color: #878787;
+        a {
+          text-decoration: none;
+          color: @primaryColor;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .login-button {
+      width: 206px;
+      height: 46px;
+      margin: 102px auto 63px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #ffffff;
+      outline: none;
+      border: none;
+      // background: url("./../../assets/images/buttom_4-1-bg.svg") no-repeat center;
+      border: none;
+      outline: none;
+      padding: 0 4px 4px 0;
+      &:hover {
+        filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.3));
+        cursor: not-allowed;
+        outline: none;
+      }
+    }
+    .login-active {
+      // background: url("./../../assets/images/buttom_4-2-bg.svg") no-repeat center;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
