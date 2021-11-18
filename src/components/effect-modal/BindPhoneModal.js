@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Modal, Form, Input, Checkbox } from 'antd';
+import { Modal, Form, Input, Checkbox, message } from 'antd';
+import { useState } from 'react';
 import "./style/BindPhoneModal.less";
 
 BindPhoneModal.propTypes = {
@@ -8,6 +9,47 @@ BindPhoneModal.propTypes = {
 };
 
 function BindPhoneModal(props) {
+
+  const [countDownNumber, setCountDownNumber] = useState(0);
+  const coundDownBoxDisable = countDownNumber !== 0;
+  const [form] = Form.useForm();
+
+  const countDownEvent = () => {
+    let countDown = 60;
+    const interval = setInterval(() => {
+      countDown -= 1;
+      setCountDownNumber(countDown);
+      if (countDown === 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
+  }
+
+  const handleCountDown = async (e) => {
+    console.log(this)
+    e.preventDefault();
+    if(coundDownBoxDisable){
+      return false;
+    }
+
+    const phone = form.getFieldValue('phone');
+    if(!/^1\d{10}$/.test(phone)) {
+      message.error('手机号格式错误！');
+      return false;
+    }
+
+    countDownEvent();
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const values = await form.validateFields();
+      console.log('Success:', values);
+    } catch (errorInfo) {
+      console.log('Failed:', errorInfo);
+    }
+  }
 
   return (
     <Modal visible={props.visible} 
@@ -26,38 +68,34 @@ function BindPhoneModal(props) {
           wrapperCol={{ span: 16 }}
           autoComplete="off"
           size="large"
+          form={form}
         >
           <Form.Item
             className="form-item"
             name="phone"
             wrapperCol={{ span: 24 }}
-            rules={[{ required: true, message: '请输入手机号', validator: (rule, value, callback) =>{
-              if(/^1[3456789]\d{9}$/.test(value)) {
-                return Promise.resolve();
-              }else{
-                return  Promise.reject();
-              }
-            }}]}
+            rules={[
+              { required: true, message: '请输入手机号'},
+              { pattern: /^1\d{10}$/, message: '手机号格式错误！'},
+            ]}
           >
-            <Input placeholder="请输入手机号"/>
+            <Input placeholder="请输入手机号" disabled={coundDownBoxDisable}/>
           </Form.Item>
           <Form.Item
             className="form-item"
             name="code"
             wrapperCol={{ span: 24 }}
-            rules={[
-               { required: true, message: '请输入4位短信验证码', validator: (rule, value, callback) => {
-                 if(value.length === 4) {
-                   return Promise.resolve();
-                 }else{
-                   return  Promise.reject();
-                 }
-               }},
-            ]}
+            rules={[{ required: true, message: '请输入4位短信验证码', len: 4}]}
           >
             <div className="form-code-container">
               <Input className="form-code-input" placeholder="请输入4位短信验证码" maxLength={4}/>
-              <div className="form-code-box">发送验证码</div>
+               <button className={`form-code-box ${coundDownBoxDisable ? 'disable' : ''}`}
+                 onClick={(e) => handleCountDown(e)}>
+                 { countDownNumber === 0  
+                   ? '发送验证码'
+                   : countDownNumber + '秒'
+                 }
+              </button>
             </div>
           </Form.Item>
           <Form.Item 
@@ -65,13 +103,17 @@ function BindPhoneModal(props) {
             name="remember" 
             wrapperCol={{ span: 24 }}
             valuePropName="checked"
-            rules={[{ required: true, message: '请同意服务协议和隐私政策' }]}>
+            rules={[{ required: true, type: 'boolean', message: '请同意服务协议和隐私政策',
+              validator: (rule, value) => {
+                return value ? Promise.resolve() : Promise.reject()
+              }
+            }]}>
             <Checkbox>同意服务协议和隐私政策</Checkbox>
           </Form.Item>
-          <div className="form-submit-btn-container">
-            <div className="form-submit-btn active">完成</div>
-          </div>
         </Form>
+        <div className="form-submit-btn-container">
+          <div className="form-submit-btn active"onClick={handleSubmit}>完成</div>
+        </div>
       </div>
     </Modal>
   );
