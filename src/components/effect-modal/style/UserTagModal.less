@@ -1,0 +1,116 @@
+@import "@style/variable.less";
+
+.user-tag-modal{
+  padding-bottom: 74px;
+  .modal-logo{
+    height: 25px;
+    background-image: url("~assets/images/modal/homeplan-logo_h.svg");
+    background-size: 110px 25px;
+    background-repeat: no-repeat;
+  }
+
+  .modal-back{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-image: url("~assets/images/modal/back-arrow-icon.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all .2s ease;
+    &:hover{
+      opacity: .8;
+    }
+  }
+
+  .modal-title{
+    margin: 74px auto 62px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+  }
+
+  .identity-item{
+    margin: 0 auto;
+    width: 326px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #14af64;
+    text-align: center;
+    background: #ececec;
+    border: 1px solid #cecece;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all .2s ease;
+    &.active,
+    &:hover{
+      color: #fff;
+      background: #14af64;
+    }
+  }
+
+  .modal-content{
+    text-align: center;
+  }
+
+  .mark-item{
+    display: inline-block;
+    width: 164px;
+    height: 167px;
+    border: 1px solid rgba(125, 125, 125, 0.6);
+    margin: 0 6px;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+    color: #999;
+
+    .mark-item-image{
+      width: 108px;
+      height: 108px;
+      margin: 0 auto;
+    }
+
+    .mark-item-title{
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    &.active{
+      border: 1px solid @primaryColor;
+      color: @primaryColor;
+    }
+  }
+  .mark-input{
+    margin: 22px auto 40px;
+    padding-left: 28px;
+    width: 340px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #666;
+    background: #f4f4f4;
+  }
+  .mark-button{
+    width: 206px;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: @primaryColor;
+    cursor: pointer;
+    &:disabled{
+      background: #ecececff;
+      cursor: not-allowed;
+    }
+  }
+}

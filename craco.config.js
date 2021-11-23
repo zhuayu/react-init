@@ -6,7 +6,7 @@ module.exports = {
   reactScriptsVersion: "react-scripts" /* (default value) */,
   webpack: {
     alias: {
-      '@': path.join(path.resolve(__dirname, './src')),
+      '@src': path.join(path.resolve(__dirname, './src')),
       '@views': path.join(path.resolve(__dirname, './src/views')),
       '@assets': path.join(path.resolve(__dirname, './src/assets')),
       '@store': path.join(path.resolve(__dirname, './src/store')),

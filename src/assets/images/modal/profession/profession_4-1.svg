@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+  <defs>
+    <style>
+      .cls-1, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2, .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: #c9c9c9;
+      }
+
+      .cls-4 {
+        opacity: 0.9;
+      }
+
+      .cls-5 {
+        stroke: #3c3c3c;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="组_4502" data-name="组 4502" transform="translate(-994 -449)">
+    <rect id="矩形_1178" data-name="矩形 1178" class="cls-1" width="108" height="108" transform="translate(994 449)"/>
+    <g id="组_3803" data-name="组 3803" class="cls-2" transform="translate(1018 462)">
+      <g id="组_3786" data-name="组 3786" class="cls-2" transform="translate(43.279 52.734)">
+        <ellipse id="椭圆_120" data-name="椭圆 120" class="cls-3" cx="6.742" cy="6.742" rx="6.742" ry="6.742" transform="translate(1.618)"/>
+        <path id="矩形_769" data-name="矩形 769" class="cls-3" d="M8.36,0h0a8.36,8.36,0,0,1,8.36,8.36v6.473a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8.36A8.36,8.36,0,0,1,8.36,0Z" transform="translate(0 14.855)"/>
+      </g>
+      <g id="组_3792" data-name="组 3792" class="cls-4" transform="translate(0 0)">
+        <rect id="矩形_770" data-name="矩形 770" class="cls-5" width="27.679" height="61.796" transform="translate(22.343 16.334)"/>
+        <rect id="矩形_771" data-name="矩形 771" class="cls-5" width="12.325" height="6.24" transform="translate(30.394 10.095)"/>
+        <line id="直线_27" data-name="直线 27" class="cls-5" y2="10.095" transform="translate(36.977)"/>
+        <g id="组_3790" data-name="组 3790" transform="translate(0 42.226)">
+          <path id="路径_611" data-name="路径 611" class="cls-5" d="M666.567,332.072l22.343-5.891v35.9H666.567Z" transform="translate(-666.567 -326.181)"/>
+          <g id="组_3787" data-name="组 3787" transform="translate(5.807 11.216)">
+            <line id="直线_28" data-name="直线 28" class="cls-5" y2="4.738"/>
+            <line id="直线_29" data-name="直线 29" class="cls-5" y2="4.738" transform="translate(5.364)"/>
+            <line id="直线_30" data-name="直线 30" class="cls-5" y2="4.738" transform="translate(10.729)"/>
+          </g>
+          <g id="组_3788" data-name="组 3788" transform="translate(5.807 18.995)">
+            <line id="直线_31" data-name="直线 31" class="cls-5" y2="4.738"/>
+            <line id="直线_32" data-name="直线 32" class="cls-5" y2="4.738" transform="translate(5.364)"/>
+            <line id="直线_33" data-name="直线 33" class="cls-5" y2="4.738" transform="translate(10.729)"/>
+          </g>
+          <g id="组_3789" data-name="组 3789" transform="translate(5.807 26.773)">
+            <line id="直线_34" data-name="直线 34" class="cls-5" y2="4.738"/>
+            <line id="直线_35" data-name="直线 35" class="cls-5" y2="4.738" transform="translate(5.364)"/>
+            <line id="直线_36" data-name="直线 36" class="cls-5" y2="4.738" transform="translate(10.729)"/>
+          </g>
+        </g>
+        <g id="组_3791" data-name="组 3791" transform="translate(27.333 23.692)">
+          <line id="直线_37" data-name="直线 37" class="cls-5" x2="17.698"/>
+          <line id="直线_38" data-name="直线 38" class="cls-5" x2="17.698" transform="translate(0 6.733)"/>
+          <line id="直线_39" data-name="直线 39" class="cls-5" x2="17.698" transform="translate(0 13.466)"/>
+          <line id="直线_40" data-name="直线 40" class="cls-5" x2="17.698" transform="translate(0 20.199)"/>
+          <line id="直线_41" data-name="直线 41" class="cls-5" x2="17.698" transform="translate(0 26.933)"/>
+          <line id="直线_42" data-name="直线 42" class="cls-5" x2="17.698" transform="translate(0 33.666)"/>
+          <line id="直线_43" data-name="直线 43" class="cls-5" x2="17.698" transform="translate(0 40.399)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

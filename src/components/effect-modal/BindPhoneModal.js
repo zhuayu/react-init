@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Modal, Form, Input, Checkbox, message } from 'antd';
 import { useState } from 'react';
 import "./style/BindPhoneModal.less";
+import smsService from "@src/global/service/sms";
 
 BindPhoneModal.propTypes = {
   visible: PropTypes.bool.isRequired,
@@ -9,8 +10,10 @@ BindPhoneModal.propTypes = {
 };
 
 function BindPhoneModal(props) {
-
+  const [locked, setLock] = useState(false);
+  const [key, setKey] = useState('');
   const [countDownNumber, setCountDownNumber] = useState(0);
+
   const coundDownBoxDisable = countDownNumber !== 0;
   const [form] = Form.useForm();
 
@@ -26,7 +29,6 @@ function BindPhoneModal(props) {
   }
 
   const handleCountDown = async (e) => {
-    console.log(this)
     e.preventDefault();
     if(coundDownBoxDisable){
       return false;
@@ -37,17 +39,40 @@ function BindPhoneModal(props) {
       message.error('手机号格式错误！');
       return false;
     }
-
-    countDownEvent();
+    if(locked) {
+      return;
+    }
+    setLock(true);
+    try {
+      const res = await smsService.smsRegisterCode({phone});
+      message.success('验证码发送成功，请注意查看 ～ ');
+      setKey(res.key);
+      setLock(false);
+      countDownEvent();
+    } catch(e) {
+      setLock(false);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const values = await form.validateFields();
-      console.log('Success:', values);
+      if(!key) {
+        message.error("请点击发送验证码");
+        return;
+      }
+      if(locked) {
+        return;
+      }
+      setLock(true);
+      await smsService.smsBindPhone({key, ...values});
+      message.success('手机号绑定成功！');
+      props.onCancel(false);
+      setLock(false);
     } catch (errorInfo) {
-      console.log('Failed:', errorInfo);
+      console.log(errorInfo)
+      setLock(false);
     }
   }
 

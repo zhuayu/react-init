@@ -17,7 +17,6 @@ const { reducer: userReducer, actions } = createSlice({
   }
 });
 
-
 export const user = createSelector(
   state => state[USER_FEATURE_KEY],
   userInfo => userInfo

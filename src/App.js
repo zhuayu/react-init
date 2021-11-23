@@ -1,6 +1,6 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useRoutes, useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux"
+import { useDispatch } from "react-redux";
 import { setUserInfo } from "./store/user.slice";
 import routes from "./router/routes.js";
 import NProgress from "nprogress";

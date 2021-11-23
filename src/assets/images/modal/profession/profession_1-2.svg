@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+  <defs>
+    <style>
+      .cls-1, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1 {
+        opacity: 0;
+      }
+
+      .cls-2, .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: #14af64;
+      }
+
+      .cls-4 {
+        opacity: 0.9;
+      }
+
+      .cls-5 {
+        stroke: #3c3c3c;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="组_3956" data-name="组 3956" transform="translate(-824 -459)">
+    <rect id="矩形_1010" data-name="矩形 1010" class="cls-1" width="108" height="108" transform="translate(824 459)"/>
+    <g id="组_3937" data-name="组 3937" transform="translate(853 472)">
+      <g id="组_3777" data-name="组 3777" class="cls-2" transform="translate(24.237 53.991)">
+        <g id="组_3776" data-name="组 3776">
+          <path id="路径_595" data-name="路径 595" class="cls-3" d="M254.635,366.87l-6.04-6.087-13.4,13.5,6.042,6.087Zm.76-.7c.623-.629,1.267-1.271,1.9-1.922a1.369,1.369,0,0,0,.044-2.112c-1.374-1.428-2.777-2.829-4.185-4.222a1.168,1.168,0,0,0-1.693-.061c-.748.709-1.415,1.5-2.1,2.242Zm-23.34,17.358,8.414-2.406-6.026-6.074Z" transform="translate(-232.054 -357.519)"/>
+          <path id="路径_596" data-name="路径 596" class="cls-3" d="M257.088,369.373l-13.4,13.5-6.042-6.087,13.4-13.5Z" transform="translate(-234.507 -360.022)"/>
+          <path id="路径_597" data-name="路径 597" class="cls-3" d="M268.922,366.17l-6.027-6.074c.681-.737,1.348-1.533,2.1-2.242a1.168,1.168,0,0,1,1.693.061c1.409,1.393,2.811,2.794,4.185,4.222a1.37,1.37,0,0,1-.044,2.112C270.189,364.9,269.544,365.541,268.922,366.17Z" transform="translate(-245.581 -357.519)"/>
+          <path id="路径_598" data-name="路径 598" class="cls-3" d="M232.054,396.972l2.388-8.48,6.026,6.074Z" transform="translate(-232.054 -370.963)"/>
+        </g>
+      </g>
+      <path id="路径_599" data-name="路径 599" class="cls-3" d="M193.88,283.27s3.81-10.688,10.6-11.857c0,0,11.245,8.74,23.171,7.4,0,0,.682-11.411-8.1-15.085s-16.565-.167-18.553,1.67C201,265.4,188.91,267.406,193.88,283.27Z" transform="translate(-190.547 -262.12)"/>
+      <g id="组_3775" data-name="组 3775" class="cls-4" transform="translate(0 4.237)">
+        <ellipse id="椭圆_117" data-name="椭圆 117" class="cls-5" cx="16.565" cy="16.7" rx="16.565" ry="16.7" transform="translate(3.976)"/>
+        <path id="矩形_762" data-name="矩形 762" class="cls-5" d="M20.541,0h0A20.541,20.541,0,0,1,41.082,20.541v16.2a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0v-16.2A20.541,20.541,0,0,1,20.541,0Z" transform="translate(0 36.796)"/>
+      </g>
+    </g>
+  </g>
+</svg>

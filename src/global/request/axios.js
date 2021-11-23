@@ -1,6 +1,6 @@
 import axios from "axios";
 import cookies from "js-cookie";
-
+import { message } from 'antd';
 const axiosInstance = axios.create();
 axiosInstance.defaults.timeout = 20000;
 
@@ -52,6 +52,7 @@ const successRes = res => {
     case res.data.error_code === 404:
       return Promise.reject(res.data);
     default:
+      message.error(res.data.msg);
       return Promise.reject(res.data);
   }
 };

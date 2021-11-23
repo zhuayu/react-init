@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import IconLike from "@/icons/like";
+import IconLike from "@src/icons/like";
 import { Button } from 'antd';
 import { DatePicker } from 'antd';
 function Home() {

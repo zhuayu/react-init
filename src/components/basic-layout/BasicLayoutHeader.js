@@ -1,11 +1,10 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { useState } from 'react';
 import { user, isVip, isLogin, isDesigner, delUserInfo } from "@store/user.slice";
+import { setLoginModalVisable } from "@store/modal.slice";
 import BasicLayoutHeaderNav from "./BasicLayoutHeaderNav";
 import BasicLayoutHeaderAvatar from "./BasicLayoutHeaderAvatar";
-import WechatScanLoginModal from "@components/effect-modal/WechatScanLoginModal";
-import BindPhoneModal from "@components/effect-modal/BindPhoneModal";
+import EffectModal from "@components/effect-modal";
 import HOMEPLAN_LOGO from "@assets/images/layout/header/homeplan-logo.svg";
 import cookies from "js-cookie";
 
@@ -30,9 +29,6 @@ function BasicLayoutHeader() {
   const userIsVip = useSelector(isVip);
   const userIsLogin = useSelector(isLogin);
   const userisDesigner = useSelector(isDesigner);
-  const [wechatModalVisible, setWechatModalVisible] = useState(false);
-  const [bindPhoneModalVisible, setbindPhoneModalVisible] = useState(true);
-
 
   const NAV_TOPAGES = ['academy', 'bible', 'question', 
     userisDesigner ? 'task' : null
@@ -52,20 +48,6 @@ function BasicLayoutHeader() {
     navigate(NAV_PATHNAME_MAP['home']);
   }
 
-  const modelComponents = (
-    <>
-      { !userIsLogin && <WechatScanLoginModal 
-        visible={wechatModalVisible} 
-        onCancel={() => setWechatModalVisible(false)}/>
-      }
-
-      { (userInfo.phone) && <BindPhoneModal 
-        visible={bindPhoneModalVisible} 
-        onCancel={() => setbindPhoneModalVisible(false)}/>
-      }
-    </>
-  );
-
   return (
     <header className="page-header">
       <div className="header-content">
@@ -83,8 +65,10 @@ function BasicLayoutHeader() {
           {userIsLogin ? (
             <>
               <div className="plan-go-container" 
+                data-testid="plan-go-btn"
                 onClick={() => handleNavItem('plan')}></div>
-              <div className="notification-container active" 
+              <div className={`notification-container ${userInfo.notification_count ? 'active' : ''}`} 
+                data-testid="notification-go-btn"
                 onClick={() => handleNavItem('notification')}></div>
               <BasicLayoutHeaderAvatar 
                 userInfo={userInfo} 
@@ -95,14 +79,12 @@ function BasicLayoutHeader() {
               />
             </>
           ) : (
-            <>
-              <div className="login-container" 
-                onClick={() => setWechatModalVisible(true)}>
-                登录 / 注册
-              </div>
-            </>
+            <div className="login-container" 
+              onClick={() => dispatch(setLoginModalVisable(true))}>
+              登录 / 注册
+            </div>
           )}
-          {modelComponents}
+          <EffectModal/>
         </div>
       </div>
     </header>
