@@ -1,7 +1,4 @@
-import {
-  createSlice,
-  createSelector
-} from "@reduxjs/toolkit"
+import { createSlice, createSelector } from "@reduxjs/toolkit";
 
 export const MODAL_FEATURE_KEY = "MODAL";
 const { reducer: modalReducer, actions } = createSlice({
@@ -21,23 +18,27 @@ const { reducer: modalReducer, actions } = createSlice({
     setUserTagModalVisable: (state, action) => {
       state.userTagModalVisable = action.payload;
     },
-  }
+  },
 });
 
 export const loginModalVisable = createSelector(
-  state => state[MODAL_FEATURE_KEY],
-  state => state.loginModalVisable
+  (state) => state[MODAL_FEATURE_KEY],
+  (state) => state.loginModalVisable
 );
 
 export const phoneModalVisable = createSelector(
-  state => state[MODAL_FEATURE_KEY],
-  state => state.phoneModalVisable
+  (state) => state[MODAL_FEATURE_KEY],
+  (state) => state.phoneModalVisable
 );
 
 export const userTagModalVisable = createSelector(
-  state => state[MODAL_FEATURE_KEY],
-  state => state.userTagModalVisable
+  (state) => state[MODAL_FEATURE_KEY],
+  (state) => state.userTagModalVisable
 );
 
-export const { setLoginModalVisable, setPhoneModalVisable, setUserTagModalVisable } = actions;
+export const {
+  setLoginModalVisable,
+  setPhoneModalVisable,
+  setUserTagModalVisable,
+} = actions;
 export default modalReducer;

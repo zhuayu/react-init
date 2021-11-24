@@ -1,18 +1,18 @@
 import * as React from "react";
 import BasicLayout from "@components/basic-layout";
 
-const Home         = React.lazy(() => import("@views/Home"));
-const Academy      = React.lazy(() => import("@views/Academy"));
-const Bible        = React.lazy(() => import("@views/Bible"));
-const Question     = React.lazy(() => import("@views/Question"));
-const Task         = React.lazy(() => import("@views/Task"));
-const Protocol     = React.lazy(() => import("@views/Protocol"));
+const Home = React.lazy(() => import("@views/Home"));
+const Academy = React.lazy(() => import("@views/Academy"));
+const Bible = React.lazy(() => import("@views/Bible"));
+const Question = React.lazy(() => import("@views/Question"));
+const Task = React.lazy(() => import("@views/Task"));
+const Protocol = React.lazy(() => import("@views/Protocol"));
 const Notification = React.lazy(() => import("@views/Notification"));
-const MyPlan       = React.lazy(() => import("@views/My/Plan"));
-const MyQuestion   = React.lazy(() => import("@views/My/Question"));
-const MyKlass      = React.lazy(() => import("@views/My/Klass"));
-const MySetting    = React.lazy(() => import("@views/My/Setting"));
-const Work         = React.lazy(() => import("@views/Work"));
+const MyPlan = React.lazy(() => import("@views/My/Plan"));
+const MyQuestion = React.lazy(() => import("@views/My/Question"));
+const MyKlass = React.lazy(() => import("@views/My/Klass"));
+const MySetting = React.lazy(() => import("@views/My/Setting"));
+const Work = React.lazy(() => import("@views/Work"));
 
 const routes = [
   {
@@ -21,54 +21,54 @@ const routes = [
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
-      { 
+      {
         path: "/academy",
-        element: <Academy />
+        element: <Academy />,
       },
-      { 
+      {
         path: "/bible",
-        element: <Bible />
+        element: <Bible />,
       },
-      { 
+      {
         path: "/question",
-        element: <Question />
+        element: <Question />,
       },
-      { 
+      {
         path: "/task",
-        element: <Task />
+        element: <Task />,
       },
-      { 
+      {
         path: "/my/plan",
-        element: <MyPlan />
+        element: <MyPlan />,
       },
-      { 
+      {
         path: "/my/class",
-        element: <MyKlass />
+        element: <MyKlass />,
       },
-      { 
+      {
         path: "/my/setting",
-        element: <MySetting />
+        element: <MySetting />,
       },
-      { 
+      {
         path: "/my/question",
-        element: <MyQuestion />
+        element: <MyQuestion />,
       },
-      { 
+      {
         path: "/work",
-        element: <Work />
+        element: <Work />,
       },
-      { 
+      {
         path: "/notification",
-        element: <Notification />
+        element: <Notification />,
       },
-    ]
+    ],
   },
-  { 
-    path: "/protocol", 
-    element: <Protocol /> 
-  }
+  {
+    path: "/protocol",
+    element: <Protocol />,
+  },
 ];
 
 export default routes;

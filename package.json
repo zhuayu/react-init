@@ -25,7 +25,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "testc": "craco test --coverage"
+    "testc": "craco test --coverage",
+    "prettier": "prettier --write src/**/*.{js,less}"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +51,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "antd-dayjs-webpack-plugin": "^1.0.6",
+    "prettier": "^2.4.1",
     "web-vitals": "^2.1.2"
   }
 }

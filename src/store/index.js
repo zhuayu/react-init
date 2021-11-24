@@ -9,11 +9,11 @@ const config = {
     [MODAL_FEATURE_KEY]: modalReducer,
   },
   devTools: process.env.NODE_ENV === "development",
-  middleware: [...getDefaultMiddleware()]
+  middleware: [...getDefaultMiddleware()],
 };
 
-if(process.env.NODE_ENV === "development") {
-  config.middleware.push(logger)
+if (process.env.NODE_ENV === "development") {
+  config.middleware.push(logger);
 }
 
 export default configureStore(config);
