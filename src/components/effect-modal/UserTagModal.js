@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import { useDispatch } from "react-redux";
+import { setUserInfo } from "@store/user.slice";
 import { Modal, message } from 'antd';
 import { IDENTITY_CONTENT } from "./UserTagModalDatas";
 import "./style/UserTagModal.less";
@@ -18,6 +20,7 @@ UserTagModal.defaultProps = {
 };
 
 function UserTagModal(props) {
+  const dispatch = useDispatch();
   const [locked, setLock] = useState(false);
   const [identiy, setIdentiy] = useState(props.identity);
   const [remark, setRemark] = useState(props.remark);
@@ -58,6 +61,7 @@ function UserTagModal(props) {
     setLock(true);
     userService.updateUserInfo(data).then(() => {
       message.success('期待看到你的新家，设计吧少年！');
+      dispatch(setUserInfo(data));
       props.onCancel();
     }).finally(() => {
       setLock(false);

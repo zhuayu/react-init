@@ -21,7 +21,6 @@ describe('公共头部渲染', () => {
     expect(loginBtn).not.toBeNull();
     fireEvent.click(loginBtn);
     expect(store.getState()['MODAL'].loginModalVisable).toBe(true);
-
   });
 
   test('导航跳转', () => {
@@ -32,7 +31,6 @@ describe('公共头部渲染', () => {
         </BrowserRouter>
       </Provider>
     );
-
 
     // 登录
     store.dispatch(setUserInfo({id:1, nickname: 'Jax'}));

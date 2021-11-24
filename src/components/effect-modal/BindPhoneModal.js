@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
-import { Modal, Form, Input, Checkbox, message } from 'antd';
 import { useState } from 'react';
+import { useDispatch } from "react-redux";
+import { setUserInfo } from "@store/user.slice";
+import { Modal, Form, Input, Checkbox, message } from 'antd';
 import "./style/BindPhoneModal.less";
 import smsService from "@src/global/service/sms";
 
@@ -10,10 +12,10 @@ BindPhoneModal.propTypes = {
 };
 
 function BindPhoneModal(props) {
+  const dispatch = useDispatch();
   const [locked, setLock] = useState(false);
   const [key, setKey] = useState('');
   const [countDownNumber, setCountDownNumber] = useState(0);
-
   const coundDownBoxDisable = countDownNumber !== 0;
   const [form] = Form.useForm();
 
@@ -67,6 +69,7 @@ function BindPhoneModal(props) {
       }
       setLock(true);
       await smsService.smsBindPhone({key, ...values});
+      dispatch(setUserInfo({ phone: values.phone }));
       message.success('手机号绑定成功！');
       props.onCancel(false);
       setLock(false);
@@ -82,7 +85,7 @@ function BindPhoneModal(props) {
       centered={true}
       closable={false}
       footer={null}>
-      <div className="bind-phone-modal">
+      <div className="bind-phone-modal" data-testid="bind-phone-modal">
         { props.onCancel && <i className="lar-cancel" onClick={() => props.onCancel(false)}></i>}
         <div className="lar-logo-container">
           <div className="lar-logo-element"></div>
