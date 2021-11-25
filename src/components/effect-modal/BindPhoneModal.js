@@ -8,7 +8,7 @@ import smsService from "@src/global/service/sms";
 
 BindPhoneModal.propTypes = {
   visible: PropTypes.bool.isRequired,
-  onCancel: PropTypes.func
+  onCancel: PropTypes.func.isRequired
 };
 
 function BindPhoneModal(props) {
@@ -37,6 +37,10 @@ function BindPhoneModal(props) {
     }
 
     const phone = form.getFieldValue('phone');
+    if(!phone) {
+      message.error('请输入手机号！');
+      return false;
+    }
     if(!/^1\d{10}$/.test(phone)) {
       message.error('手机号格式错误！');
       return false;
@@ -47,7 +51,7 @@ function BindPhoneModal(props) {
     setLock(true);
     try {
       const res = await smsService.smsRegisterCode({phone});
-      message.success('验证码发送成功，请注意查看 ～ ');
+      message.success('验证码发送成功，请注意查看 ～');
       setKey(res.key);
       setLock(false);
       countDownEvent();
@@ -74,7 +78,6 @@ function BindPhoneModal(props) {
       props.onCancel(false);
       setLock(false);
     } catch (errorInfo) {
-      console.log(errorInfo)
       setLock(false);
     }
   }
@@ -85,8 +88,8 @@ function BindPhoneModal(props) {
       centered={true}
       closable={false}
       footer={null}>
-      <div className="bind-phone-modal" data-testid="bind-phone-modal">
-        { props.onCancel && <i className="lar-cancel" onClick={() => props.onCancel(false)}></i>}
+      <div className="bind-phone-modal">
+        <i className="lar-cancel" onClick={() => props.onCancel(false)}></i>
         <div className="lar-logo-container">
           <div className="lar-logo-element"></div>
         </div>
@@ -107,7 +110,7 @@ function BindPhoneModal(props) {
               { pattern: /^1\d{10}$/, message: '手机号格式错误！'},
             ]}
           >
-            <Input placeholder="请输入手机号" disabled={coundDownBoxDisable}/>
+            <Input data-testid="input-for-phone" placeholder="请输入手机号" disabled={coundDownBoxDisable}/>
           </Form.Item>
           <Form.Item
             className="form-item"
@@ -116,7 +119,7 @@ function BindPhoneModal(props) {
             rules={[{ required: true, message: '请输入4位短信验证码', len: 4}]}
           >
             <div className="form-code-container">
-              <Input className="form-code-input" placeholder="请输入4位短信验证码" maxLength={4}/>
+              <Input data-testid="input-for-code" className="form-code-input" placeholder="请输入4位短信验证码" maxLength={4}/>
                <button className={`form-code-box ${coundDownBoxDisable ? 'disable' : ''}`}
                  onClick={(e) => handleCountDown(e)}>
                  { countDownNumber === 0  
@@ -136,11 +139,11 @@ function BindPhoneModal(props) {
                 return value ? Promise.resolve() : Promise.reject()
               }
             }]}>
-            <Checkbox>同意服务协议和隐私政策</Checkbox>
+            <Checkbox data-testid="checkbox-for-remember">同意服务协议和隐私政策</Checkbox>
           </Form.Item>
         </Form>
         <div className="form-submit-btn-container">
-          <div className="form-submit-btn active"onClick={handleSubmit}>完成</div>
+          <div className="form-submit-btn active" onClick={handleSubmit}>完成</div>
         </div>
       </div>
     </Modal>

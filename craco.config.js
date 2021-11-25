@@ -24,6 +24,7 @@ module.exports = {
   },
   jest: {
     configure: {
+      "testEnvironment": "node",
       "transformIgnorePatterns": [
         "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
       ],
