@@ -6,7 +6,6 @@ describe('导航渲染', () => {
   const navDatas = ['academy', 'bible', 'question', 'task'];
   const navActive = 'bible';
 
-
   test('渲染四个导航项', () => {
     render(
       <BasicLayoutHeaderNav 

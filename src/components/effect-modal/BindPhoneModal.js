@@ -89,9 +89,9 @@ function BindPhoneModal(props) {
       closable={false}
       footer={null}>
       <div className="bind-phone-modal">
-        <i className="lar-cancel" onClick={() => props.onCancel(false)}></i>
-        <div className="lar-logo-container">
-          <div className="lar-logo-element"></div>
+        <i className="bind-phone-cancel" onClick={() => props.onCancel(false)}></i>
+        <div className="bind-phone-logo-container">
+          <div className="bind-phone-logo-element"></div>
         </div>
         <div className="modal-title">绑定手机</div>
         <Form

@@ -13,7 +13,7 @@ describe('手机绑定弹框', () => {
         <BindPhoneModal visible={true} onCancel={mockFunc}/>
       </Provider>
     );
-    const closeBtn = document.getElementsByClassName('lar-cancel')[0];
+    const closeBtn = document.getElementsByClassName('bind-phone-cancel')[0];
     fireEvent.click(closeBtn);
     expect(mockFunc).toHaveBeenCalled();
   });

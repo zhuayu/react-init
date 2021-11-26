@@ -60,10 +60,11 @@ function UserTagModal(props) {
 
     setLock(true);
     userService.updateUserInfo(data).then(() => {
+      setLock(false);
       message.success('期待看到你的新家，设计吧少年！');
       dispatch(setUserInfo(data));
       props.onCancel();
-    }).finally(() => {
+    }).catch(() => {
       setLock(false);
     });
   }
