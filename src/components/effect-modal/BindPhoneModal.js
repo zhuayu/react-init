@@ -62,16 +62,16 @@ function BindPhoneModal(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(!key) {
+      message.error("请点击发送验证码");
+      return;
+    }
+    if(locked) {
+      return;
+    }
+    setLock(true);
     try {
       const values = await form.validateFields();
-      if(!key) {
-        message.error("请点击发送验证码");
-        return;
-      }
-      if(locked) {
-        return;
-      }
-      setLock(true);
       await smsService.smsBindPhone({key, ...values});
       dispatch(setUserInfo({ phone: values.phone }));
       message.success('手机号绑定成功！');
