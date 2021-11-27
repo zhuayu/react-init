@@ -1,6 +1,5 @@
 import { render, screen, fireEvent, act } from '@testing-library/react';
 import EffectModal from "@components/effect-modal/index";
-
 import { 
   setLoginModalVisable,
   setPhoneModalVisable,
@@ -12,12 +11,10 @@ import store from "@src/store";
 import authService from "@src/global/service/auth";
 import userService from "@src/global/service/user";
 
-
 describe('全局弹框', () => {
 
   test('展示逻辑', async () => {
     const mockFunc = jest.fn();
-    jest.mock("../../../global/service/auth");
     jest.spyOn(authService, 'wxlogin').mockImplementation(() => {
       return Promise.resolve({})
     });
@@ -27,7 +24,6 @@ describe('全局弹框', () => {
         remark: '学装修 DIY自己的家'
       })
     });
-
 
     render(
       <Provider store={store}>

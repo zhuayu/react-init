@@ -28,6 +28,9 @@ module.exports = {
       "transformIgnorePatterns": [
         "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
       ],
+      "coveragePathIgnorePatterns": [
+        "<rootDir>/src/global",
+      ],
       "moduleNameMapper": {
         "^@src(.*)$": "<rootDir>/src$1",
         "^@store(.*)$": "<rootDir>/src/store$1",

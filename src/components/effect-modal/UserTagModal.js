@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { setUserInfo } from "@store/user.slice";
 import { Modal, message } from 'antd';
-import { IDENTITY_CONTENT } from "./UserTagModalDatas";
+import { IDENTITY_CONTENT } from "./datas/UserTagModalDatas";
 import "./style/UserTagModal.less";
 import userService from "@src/global/service/user";
 
@@ -24,7 +24,7 @@ function UserTagModal(props) {
   const [locked, setLock] = useState(false);
   const [identiy, setIdentiy] = useState(props.identity);
   const [remark, setRemark] = useState(props.remark);
-  const [mode, setMode] = useState(props.identity > 0 ? 'remark' : 'identity');
+  const [mode, setMode] = useState('identity');
   const selectedIdentiy = IDENTITY_CONTENT.find(item => item.id === identiy);
   const remarkItems = selectedIdentiy ? selectedIdentiy.children : [];
   const hasSelectedRemark = remarkItems.some(item => item.name === remark);
@@ -57,7 +57,6 @@ function UserTagModal(props) {
       identity: identiy,
       remark: hasSelectedRemark ? remark : inputValue
     }
-
     setLock(true);
     userService.updateUserInfo(data).then(() => {
       setLock(false);

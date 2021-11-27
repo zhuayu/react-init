@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import BasicLayoutFooter from "./../BasicLayoutFooter";
 
-
 describe('公共尾部渲染', () => {
 
   const ICP_TEXT = "沪ICP备2020026846号";
